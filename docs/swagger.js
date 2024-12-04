@@ -519,7 +519,7 @@ const swaggerDocs = {
 		},
 		"/flags": {
 			post: {
-				summary: "Cria uma nova bandeira.",
+				summary: "Cria uma nova bandeira (somente administradores).",
 				description: "Rota post para criar novas bandeiras.",
 				tags: ["Flags"],
 				security: [{ bearerAuth: [] }],
@@ -693,7 +693,7 @@ const swaggerDocs = {
 				}
 			},
 			put: {
-				summary: "Atualiza os registros de bandeiras.",
+				summary: "Atualiza os registros de bandeiras (somente adminstradores).",
 				description: "Rota put para atualizar as bandeiras.",
 				tags: ["Flags"],
 				security: [{ bearerAuth: [] }],
@@ -768,7 +768,7 @@ const swaggerDocs = {
 				}
 			},
 			delete: {
-				summary: "Deleta uma bandeira.",
+				summary: "Deleta uma bandeira (somente administradores).",
 				description: "Rota delete para deletar uma bandeira com base em seu id.",
 				tags: ["Flags"],
 				security: [{ bearerAuth: [] }],
