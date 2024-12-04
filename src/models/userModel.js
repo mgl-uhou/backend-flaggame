@@ -23,6 +23,11 @@ const Users = sequelize.define("Users", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  isAdmin: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false
+  }
 }, {
   timestamps: true, // Cria automaticamente createdAt e updatedAt
   indexes: [
