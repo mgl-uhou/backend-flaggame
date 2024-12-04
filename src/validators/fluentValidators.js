@@ -79,7 +79,7 @@ class FluentValidator {
 	 * @param {String} value Valor a ser validado.
 	 */
 	isPassword(value){
-		let regex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_\\^])[A-Za-z\d$@$!%*?&_\\^]{8,75}$/);
+		let regex = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&_\\^#])[A-Za-z\d$@$!%*?&_\\^#]{8,75}$/);
 		if(!regex.test(value)){
 			this.setPushError({
 				message: "Senha inválida."
