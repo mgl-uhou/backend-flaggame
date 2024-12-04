@@ -25,6 +25,12 @@ const Users = sequelize.define("Users", {
   },
 }, {
   timestamps: true, // Cria automaticamente createdAt e updatedAt
+  indexes: [
+    {
+      unique: true,
+      fields: ["email"]
+    }
+  ]
 });
 
 module.exports = Users;
