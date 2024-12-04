@@ -26,6 +26,7 @@ class FlagController {
 
 	async post(req, res) {
 		try {
+			if(!req.user.isAdmin) throw new Error("Usuário não autorizado.");
 			const flag = await flagRepository.create(req.body);
 			res.status(201).json({ message: "Bandeira cadastrada com sucesso.", flag });
 		} catch (error) {
@@ -35,6 +36,7 @@ class FlagController {
 
 	async put(req, res) {
 		try {
+			if(!req.user.isAdmin) throw new Error("Usuário não autorizado.");
 			const flag = await flagRepository.findById(req.params.id);
 			if(!flag) return res.status(404).json({ message: "Bandeira não encontrada." });
 
@@ -47,6 +49,7 @@ class FlagController {
 
 	async delete(req, res) {
 		try {
+			if(!req.user.isAdmin) throw new Error("Usuário não autorizado.");
 			const flag = await flagRepository.findById(req.params.id);
 			if(!flag) return res.status(404).json({ message: "Bandeira não encontrada." });
 
