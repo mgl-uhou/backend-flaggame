@@ -21,31 +21,6 @@ const swaggerDocs = {
 		}
 	],
 	paths: {
-		/* "/": {
-			get: {
-				summary: "Hello World",
-				description: "Teste de conexão",
-				tags: ["/"],
-				responses: {
-					200: {
-						description: "Hello World",
-						content: {
-							"text/plain": {
-								example: "Hello World!"
-							}
-						}
-					},
-					404: {
-						description: "Route not Found",
-						content: {
-							"text/plain": {
-								example: "Not Found"
-							}
-						}
-					}
-				}
-			}
-		}, */
 		"/users": {
 			post: {
 				summary: "Cria um novo usuário.",
@@ -154,44 +129,6 @@ const swaggerDocs = {
 						}
 					}
 				} 
-			},
-			get: {
-				summary: "Busca todos os usuários (esse get é provisório, provavelmente será removido.)",
-				description: "Rota get para buscar todos os usuários cadastrados no banco.",
-				tags: ["Users"],
-				responses: {
-					200: {
-						description: "Requisição realizada com sucesso.",
-						content: {
-							"application/json": {
-								schema: {
-									type: "array",
-									items: {
-										$ref: "#/components/schemas/User"	
-									}
-								},
-								example: [
-									{
-										nickname: "JohnDoe",
-										email: "john.doe@gmail.com",
-										id: "5e5e5e5e5e5e5e5e5e5e5e5e",
-										createdAt: "2020-01-01T00:00:00.000Z"
-									}
-								]
-							}
-						}
-					},
-					400: {
-						description: "Erro ao buscar usuários.",
-						content: {
-							"application/json": {
-								schema: {
-									$ref: "#/components/schemas/DefaultError"
-								}
-							}
-						}
-					}
-				}
 			},
 			put:{
 				summary: "Atualiza o perfil do usuário com base no token de autenticação.",

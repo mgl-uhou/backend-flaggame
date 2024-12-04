@@ -8,15 +8,6 @@ const errorFunction = require("../validators/errorFunction");
 require("dotenv").config();
 
 class UserController {
-	async getAll(_req, res){
-		try {
-			const data = await userRepository.getAll();
-			res.status(200).json(data);
-		} catch (e) {
-			errorFunction(res, e.message, "Erro ao buscar usuários.", 400);
-		}
-	}
-
 	async post(req, res){
 		const { nickname, email, password } = req.body;
 		const validationContract = new ValidationContract();
