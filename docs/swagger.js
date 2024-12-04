@@ -522,6 +522,7 @@ const swaggerDocs = {
 				summary: "Cria uma nova bandeira.",
 				description: "Rota post para criar novas bandeiras.",
 				tags: ["Flags"],
+				security: [{ bearerAuth: [] }],
 				requestBody: {
 					content: {
 						"application/json": {
@@ -529,7 +530,7 @@ const swaggerDocs = {
 								$ref: "#/components/schemas/Flag",
 							},
 							example: {
-								name: "Alagos",
+								name: "Alagoas",
 								link: "https://th.bing.com/th/id/R.66644858928291e4453cb4f27297cc27?rik=HPMmhbSoUr1J1w&riu=http%3a%2f%2faimore.org%2fbrasil%2fAlagoas.jpg&ehk=OX%2f%2fuH2Wl%2b6nHSArgFsnVtcgeh60j9n4gLSTv10csQw%3d&risl=&pid=ImgRaw&r=0"
 							}
 						}
@@ -695,6 +696,7 @@ const swaggerDocs = {
 				summary: "Atualiza os registros de bandeiras.",
 				description: "Rota put para atualizar as bandeiras.",
 				tags: ["Flags"],
+				security: [{ bearerAuth: [] }],
 				parameters: [
 					{
 						name: "id",
@@ -769,6 +771,7 @@ const swaggerDocs = {
 				summary: "Deleta uma bandeira.",
 				description: "Rota delete para deletar uma bandeira com base em seu id.",
 				tags: ["Flags"],
+				security: [{ bearerAuth: [] }],
 				parameters: [
 					{
 						name: "id",
