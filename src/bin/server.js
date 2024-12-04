@@ -5,6 +5,7 @@ const app = require("../app/app");
 const { connectDB, sequelize } = require("../database/dbConnection");
 
 const PORT = process.env.PORT || 3000;
+console.log(PORT);
 
 const startServer = async () => {
 	try {
