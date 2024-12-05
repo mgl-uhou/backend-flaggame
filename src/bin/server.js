@@ -4,9 +4,8 @@ require("dotenv").config();
 const app = require("../app/app");
 const { connectDB, sequelize } = require("../database/dbConnection");
 
-// const PORT = process.env.PORT || 3000;
-// console.log(PORT);
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
+console.log(PORT);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
