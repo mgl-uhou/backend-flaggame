@@ -8,6 +8,8 @@ const { connectDB, sequelize } = require("../database/dbConnection");
 // console.log(PORT);
 const PORT = process.env.PORT;
 
+app.get("/", (req, res) => res.send("Hello World!"));
+
 const startServer = async () => {
 	try {
 		await connectDB();
