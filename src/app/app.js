@@ -12,11 +12,10 @@ const app = express();
 
 app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-/* app.use(cors({
-    origin: 'http://localhost:3001', 
+app.use(cors({
+    origin: 'https://backend-flaggame.onrender.com/', 
     credentials: true, 
-})); */
-app.use(cors());
+}));
 app.use("/users", usersRoute);
 app.use("/flags", flagsRoute);
 app.use(express.static(path.join(__dirname, "../../../public")));
