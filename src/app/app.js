@@ -21,7 +21,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // Lista de domínios permitidos
 const allowedOrigins = ['http://127.0.0.1:5500', 'https://backend-flaggame.onrender.com'];
 
-// Configuração do CORS
+/* // Configuração do CORS
 app.use(cors({
   origin: function (origin, callback) {
     // Permite a solicitação se o domínio estiver na lista ou for undefined (como em ferramentas locais)
@@ -34,7 +34,8 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
   credentials: true // Permitir cookies e credenciais
-}));
+})); */
+app.use(cors());
 
 app.use("/users", usersRoute);
 app.use("/flags", flagsRoute);
