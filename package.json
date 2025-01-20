@@ -9,7 +9,7 @@
     "postinstall": "npm install pg pg-hstore",
     "start": "node src/bin/server.js",
     "dev": "nodemon src/bin/server.js",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
