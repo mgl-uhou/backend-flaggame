@@ -2,6 +2,7 @@
 
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || "localhost";
 
 const swaggerDocs = {
 	openapi: "3.1.0",
@@ -9,7 +10,7 @@ const swaggerDocs = {
 		title: "FlagGame API",
 		description:
 			"API de CRUD para os usuários e modos de jogo do FlagGame para guiar os frontends.",
-		termsOfService: `http://localhost:${PORT}/terms`,
+		termsOfService: `http://${HOST}:${PORT}/terms`,
 		contact: {
 			email: "mfl10@aluno.ifal.edu.br",
 		},
@@ -21,7 +22,7 @@ const swaggerDocs = {
 			description: "API de produção."
 		},
 		{
-			url: `http://localhost:${PORT}`,
+			url: `http://${HOST}:${PORT}`,
 			description: "API de testes para os devs.",
 		},
 	],
