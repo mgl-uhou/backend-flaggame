@@ -17,12 +17,12 @@ const swaggerDocs = {
 	},
 	servers: [
 		{
-			url: "https://backend-flaggame.onrender.com",
-			description: "API de produção."
-		},
-		{
 			url: `http://localhost:${PORT}`,
 			description: "API de testes para os devs.",
+		},
+		{
+			url: "https://backend-flaggame.onrender.com",
+			description: "API de produção."
 		},
 	],
 	paths: {
